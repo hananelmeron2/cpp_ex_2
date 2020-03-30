@@ -155,14 +155,11 @@ using namespace std;
                   }
                   else
                   {
-			  throw "Division by zero condition!";
+			  throw invalid_argument("did not found the word "+ b +" in the text");
                   }
                }
 
-               for(int i=0; i<20; i++)
-               {
-                 //cout << help1[i] << ",  " << endl;
-               }
+               
                string ans = " ";
                return ans;
             
