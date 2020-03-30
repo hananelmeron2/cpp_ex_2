@@ -155,6 +155,7 @@ using namespace std;
                   }
                   else
                   {
+			  throw "Division by zero condition!";
                   }
                }
 
