@@ -155,7 +155,7 @@ using namespace std;
                   }
                   else
                   {
-			  throw invalid_argument("did not found the word "+ b +" in the text");
+			  throw invalid_argument("wrong input !");
                   }
                }
 
