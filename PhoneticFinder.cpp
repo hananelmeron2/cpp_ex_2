@@ -10,9 +10,9 @@ using namespace std;
        
         string find(string text ,string word)
         {
-              string text1 = text;
-              string word1 = word;
-              string word2 = word;
+              string text1 = text; // the original text
+              string word1 = word; // the original word
+              string word2 = word; // the original word
               
               char c[] = {'w','f','p','j','k','q','z','t','u','y'};  // the letters that can change
               char c1[] = {'v','b','f','g','c','k','s','d','o','i'};
@@ -49,7 +49,7 @@ using namespace std;
               }
 
 
-             // create array of strings
+         //  help1 = array of the lower case word WORDS !
          {  
               for(auto x:text)
               {
@@ -72,7 +72,7 @@ using namespace std;
                   help1[u] = str;
          }
 
-         {  
+         {  //  help2 = array of the original WORDS !
               for(auto y:text1)
               {
                 
@@ -94,16 +94,16 @@ using namespace std;
                   help2[m] = str1;
          }
 
-               for(int i=0; i<20; i++)
+               for(int i=0; i<20; i++) // number of lower case words
                {
-                    for(int j=0; j<word.size(); j++) 
+                    for(int j=0; j<word.size(); j++)  // size of word 
                     {
-                       string h = help1[i];
+                       string h = help1[i]; // the lowwer case word
                        if(h.size() == word.size())
                        {
-                          if(h[j] != word1[j] || h[j] == word1[j])
+                          if(h[j] != word1[j] || h[j] == word1[j]) 
                           {
-                             if
+                             if  //check all options 
                              (
                                 (word1[j] == 'w' && h[j] == 'v')  || (word1[j] == 'v' && h[j] == 'w') || 
 
@@ -133,11 +133,11 @@ using namespace std;
                                 
                               ) 
                               {
-                                 k++;
+                                 k++; // k++ mean that the index of word and the help1[i] index are good
                               }
-                               if(k == word.size())
+                               if(k == word.size()) // the same word, because all the indexes are in the if() !
                                {
-                                  string ans1 = help2[i];
+                                  string ans1 = help2[i]; // the original word position
                                   return ans1;
                                }
                                
@@ -147,7 +147,7 @@ using namespace std;
                     k=0;
                }
 
-               for(int i=0; i<20; i++)
+               for(int i=0; i<20; i++) // for throw exepction
                {
                   if(help1[i] == word)
                   {
